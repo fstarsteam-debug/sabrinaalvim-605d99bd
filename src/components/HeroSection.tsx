@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
+import sabrinaPhoto from "@/assets/sabrina-photo.png";
 
 const HeroSection = () => {
   return (
@@ -19,12 +20,22 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-slide-up">
+          {/* Profile Photo */}
+          <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto mb-8">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-xl opacity-50 animate-pulse" />
+            <img 
+              src={sabrinaPhoto} 
+              alt="Sabrina Alvim" 
+              className="relative w-full h-full object-cover object-top rounded-full border-4 border-primary/30"
+            />
+          </div>
+          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
             <span className="text-foreground">Sabrina Alvim</span>
             <br />
-            <span className="text-gradient">Designer Gráfica</span>
+            <span className="text-gradient text-2xl md:text-3xl lg:text-4xl">Graphic Designer</span>
             <br />
-            <span className="text-foreground text-3xl md:text-4xl lg:text-5xl">e Especialista em Mídias Sociais</span>
+            <span className="text-foreground text-2xl md:text-3xl lg:text-4xl">& Social Media Specialist</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light">
@@ -46,8 +57,8 @@ const HeroSection = () => {
               size="xl"
               asChild
             >
-              <a href="#portfolio">
-                Ver Portfólio
+              <a href="#sobre">
+                Sobre Mim
               </a>
             </Button>
           </div>
