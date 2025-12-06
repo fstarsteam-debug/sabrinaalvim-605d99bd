@@ -4,6 +4,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import IdentidadeVisual from "./pages/IdentidadeVisual";
+import SocialMedia from "./pages/SocialMedia";
+import Reels from "./pages/Reels";
+import CardsCarrosseis from "./pages/CardsCarrosseis";
+import Embalagem from "./pages/Embalagem";
+import Impressos from "./pages/Impressos";
+import Branding from "./pages/Branding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/identidade-visual" element={<IdentidadeVisual />} />
+          <Route path="/social-media" element={<SocialMedia />} />
+          <Route path="/reels" element={<Reels />} />
+          <Route path="/cards-carrosseis" element={<CardsCarrosseis />} />
+          <Route path="/embalagem" element={<Embalagem />} />
+          <Route path="/impressos" element={<Impressos />} />
+          <Route path="/branding" element={<Branding />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
